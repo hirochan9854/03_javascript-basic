@@ -57,6 +57,46 @@
       m++; // m = m +1 と同じ
       console.log(m);
 
+3.html の操作
+
+  <body>
+    <h1>果物の種類</h1>
+    <ul id="fruitslist" class="listbox__list">
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>バナナ</li>
+    </ul>
+    <!--リストを操作するDOM操作のスクリプト-->
+    <script>
+      //メロンを追加
+
+      //ulタグの取得
+      const element = document.querySelector("ul");
+      console.log(element);
+
+      //idやclassで取得
+      const element2 = document.querySelector("#fruitslist");
+      console.log(element2);
+
+      const element3 = document.querySelector(".listbox__list");
+      console.log(element3);
+
+      //新しくliタグの要素を追加
+      const liLast = document.createElement("li");
+      console.dir(liLast);
+      liLast.textContent = "メロン";
+      console.log(liLast);
+
+      //リストの最後の子要素として追加
+      element.appendChild(liLast);
+
+      //スタイルの変更
+      liLast.style.color = "green";
+      console.log(liLast.style.color);
+    </script>
+
+  </body>
+
 ## 10 月 5 日
 
 - インターネットの基本について理解する。
