@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <dl class="recipe">
+      <dt>カップヌードルの作り方</dt>
+      <dd>フタを途中まで開ける</dd>
+      <dd>お湯を線まで入れてフタをする</dd>
+    </dl>
+    <script>
+      const element = document.querySelector(".recipe");
+      const ddlast = document.createElement("dd");
+      ddlast.innerText = "3分待ってできあがり";
+      element.appendChild(ddlast);
+    </script>
+  </body>
+</html>
