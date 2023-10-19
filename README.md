@@ -7,6 +7,40 @@
 1. 10 月 5 日（木）はじめの一歩
 2. 10 月 5 日（木）git 側から入力
 
+## 10 月 19 日
+
+for 文と配列を使ってリストに要素を追加する
+
+    <script>
+      for (let i = 0; i < 4; i++) {
+        console.log(i);
+      }
+
+      const name_list = ["松田", "田中", "中山", "山本", "本田"];
+
+      for (let i = 0; i < name_list.length; i++) {
+        console.log(i + 1 + "人目は" + name_list[i]);
+      }
+    </script>
+
+  </body>
+</html>
+
+    <h1>人気フルーツ一覧</h1>
+    <ul id="fruitslist" class="listbox__list"></ul>
+    <script>
+      const fruits = ["りんご", "もも", "バナナ"];
+      const elment = document.querySelector("#fruitslist");
+      console.log(fruits);
+      console.log(elment);
+
+      for (let i = 0; i < fruits.length; i++) {
+        const lilast = document.createElement("li");
+        lilast.innerHTML = fruits[i];
+        elment.appendChild(lilast);
+      }
+    </script>
+
 ## 10 月 12 日
 
 1.文字列の結合

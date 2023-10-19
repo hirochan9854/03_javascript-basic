@@ -8,6 +8,17 @@
   <body>
     <h1>人気フルーツ一覧</h1>
     <ul id="fruitslist" class="listbox__list"></ul>
-    <script></script>
+    <script>
+      const fruits = ["りんご", "もも", "バナナ"];
+      const element = document.querySelector("#fruitslist");
+      console.log(fruits);
+      console.log(elment);
+
+      for (let i = 0; i < fruits.length; i++) {
+        const lilast = document.createElement("li");
+        lilast.innerHTML = fruits[i];
+        element.appendChild(lilast);
+      }
+    </script>
   </body>
 </html>
