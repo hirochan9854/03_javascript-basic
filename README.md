@@ -7,6 +7,52 @@
 1. 10 月 5 日（木）はじめの一歩
 2. 10 月 5 日（木）git 側から入力
 
+##10 月 19 日
+
+addEventListener でイベント
+setAttribute で属性、値の操作
+
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>イベントハンドラを登録演習 ②</title>
+    <style>
+      .redText {
+        color: red;
+      }
+      .bigText {
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span>JavaScript</span
+      >（ジャバスクリプト）とは、プログラミング言語のひとつである。
+    </p>
+    <button class="redder">赤くなる</button>
+    <button class="bigger">大きくなる</button>
+
+    <script>
+      const btnRed = document.querySelector(".redder");
+      const btnBig = document.querySelector(".bigger");
+
+      const jsText = document.querySelector("p span");
+
+      //クラスを付与してスタイルの適用
+      btnRed.addEventListener("click", function () {
+        jsText.setAttribute("class", "redText");
+      });
+
+      btnBig.addEventListener("click", function () {
+        jsText.setAttribute("class", "bigText");
+      });
+    </script>
+
+  </body>
+</html>
+
 ## 10 月 19 日
 
 for 文と配列を使ってリストに要素を追加する

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>演習</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="text"><span>色の名前</span>色です。</p>
+
+    <button class="red">赤色</button>
+    <button class="blue">青色</button>
+    <button class="yellow">黄色</button>
+
+    <script>
+      //ボタンの取得
+      const redBtn = document.querySelector(".red");
+      const blueBtn = document.querySelector(".blue");
+      const yellowBtn = document.querySelector(".yellow");
+
+      const text = document.querySelector(".text");
+      const spanText = document.querySelector(".text span");
+
+      console.dir(redBtn);
+      //赤
+      redBtn.addEventListener("click", function () {
+        text.style.color = "#ff0000";
+        text.style.fontSize = "50px";
+        text.style.backgroundColor = "#ffff00";
+        spanText.innerText = "赤";
+      });
+
+      //青
+      blueBtn.addEventListener("click", function () {
+        text.style.color = "#0000ff";
+        text.style.fontSize = "50px";
+        text.style.backgroundColor = "#ff0000";
+        spanText.innerText = "青";
+      });
+
+      //黄色
+      yellowBtn.addEventListener("click", function () {
+        text.style.color = "#ffff00";
+        text.style.fontSize = "50px";
+        text.style.backgroundColor = "#0000ff";
+        spanText.innerText = "黃";
+        blueBtn.style;
+      });
+    </script>
+
+    <script>
+      //スクロールするたびにconsoleに「スクロールされました」と表示する
+      window.addEventListener("scroll", function () {
+        console.log("スクロールされました");
+      });
+    </script>
+  </body>
+</html>
