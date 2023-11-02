@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>属性の操作</title>
+    <style>
+      body {
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">タイトル</h1>
+
+    <script>
+      const h1_element = document.querySelector("h1");
+
+      const has_result = h1_element.hasAttribute("class");
+      console.log(has_result);
+
+      const get_result = h1_element.getAttribute("class");
+      console.log(get_result);
+
+      h1_element.className = "titele sitename";
+
+      h1_element.classList.add("w-full");
+
+      h1_element.classList.remove("sitename");
+
+      const contains_result = h1_element.classList.contains("sitename");
+      console.log(contains_result);
+    </script>
+  </body>
+</html>
