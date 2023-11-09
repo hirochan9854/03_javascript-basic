@@ -43,12 +43,27 @@
         fbtn[i].addEventListener("click", function () {
           Fuji_img.setAttribute("src", "images/" + fujiImg_list[i]);
           bango = i;
+          console.log(bango);
         });
       }
       //ボタンをクリックすると、画像の src 属性に配列 fujiImg_list 内の要素が設定される（setAttribute）ことで画像への path が設定されます。
 
       const Bbtn = document.querySelector(".mae");
       const Nbtn = document.querySelector(".tugi");
+      Bbtn.addEventListener("click", function () {
+        if (bango != 0) {
+          Fuji_img.setAttribute("src", "images/" + fujiImg_list[bango - 1]);
+          bango -= 1;
+          console.log(bango);
+        }
+      });
+      Nbtn.addEventListener("click", function () {
+        if (bango != 2) {
+          Fuji_img.setAttribute("src", "images/" + fujiImg_list[bango + 1]);
+          bango += 1;
+          console.log(bango);
+        }
+      });
     </script>
   </body>
 </html>

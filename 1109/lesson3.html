@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 100vh;
+      }
+      .clickArea {
+        display: flex;
+        width: 100%;
+      }
+      .clickArea ol {
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>左右どっち？</h1>
+      <div class="clickArea">
+        <ol class="leftZone"></ol>
+        <ol class="rightZone"></ol>
+      </div>
+    </section>
+    <script>
+      const widthsize = window.innerWidth; //現在のブラウザの横幅
+      console.log(widthsize);
+
+      //以下から記述していきます。
+
+      const leftlist = document.querySelector(".leftZone");
+      const rightlist = document.querySelector(".rightZone");
+
+      document.body.addEventListener("click", function (event) {
+        console.log(event.clientX);
+        const newlist = document.createElement("li");
+        if (event.clientX >= widthsize / 2) {
+          newlist.textContent = "右";
+          rightlist.appendChild(newlist);
+        } else {
+          newlist.textContent = "左";
+          leftlist.appendChild(newlist);
+        }
+      });
+    </script>
+  </body>
+</html>
