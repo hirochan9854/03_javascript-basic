@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>中間確認テスト</title>
+  </head>
+  <body>
+    <div class="images">
+      <img src="path/cat.png" alt="猫の画像" class="img_cat" />
+      <img src="path/dog.png" alt="犬の画像" class="img_dog" />
+      <img src="path/panda.png" alt="パンダの画像" class="img_panda" />
+    </div>
+    <script>
+      const school = "トライデントコンピュータ専門学校";
+      const course = "Webデザイン学科";
+      console.log(school + course);
+
+      const catImg = document.querySelector(".images .img_cat");
+      console.log(catImg.getAttribute("alt"));
+
+      const goranger = [
+        "アカレンジャー",
+        "アオレンジャー",
+        "ミドレンジャー",
+        "キレンジャー",
+        "モモレンジャー",
+      ];
+      console.log(goranger[4]);
+
+      for (let i = 0; i < goranger.length; i++) {
+        console.log(goranger[i]);
+      }
+    </script>
+  </body>
+</html>
