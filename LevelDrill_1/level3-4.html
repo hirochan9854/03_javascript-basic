@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -29,6 +29,16 @@
 
       const num = Math.floor(Math.random() * 5);
       const foods = document.querySelectorAll(".foods li");
+
+      for (let i = 0; i < foods.length; i++) {
+        foods[i].addEventListener("click", function () {
+          if (num === i) {
+            console.log("あたり");
+          } else {
+            console.log("はずれ");
+          }
+        });
+      }
     </script>
   </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>戻り値</title>
+  </head>
+  <body>
+    <p>ケーキ（450円）の税込み価格</p>
+    <button class="takeOut">テイクアウト</button>
+    <button class="eatIn">イートイン</button>
+    <p>税込み価格は、<span class="taxIn"></span>円です。</p>
+    <script>
+      const cake = 450;
+      const btn = document.querySelectorAll("button");
+      const price = document.querySelector(".taxIn");
+
+      const taxPrice = function (tax) {
+        result = cake + cake * tax;
+        return result;
+      };
+
+      //   btn[0].addEventListener("click", function () {
+      //     price.innerHTML = taxPrice(0.08);
+      //   });
+
+      //   btn[1].addEventListener("click", function () {
+      //     price.innerHTML = taxPrice(0.1);
+      //   });
+
+      for (let i = 0; i < btn.length; i++) {
+        btn[i].addEventListener("click", function () {
+          if (i === 0) {
+            price.innerHTML = taxPrice(0.08);
+          } else {
+            price.innerHTML = taxPrice(0.1);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

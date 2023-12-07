@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>関数</title>
+  </head>
+  <body>
+    <script>
+      /*関数の定義*/
+      function aisatu(message) {
+        console.log(message);
+      }
+
+      /*関数の実行*/
+      aisatu("おはよう");
+      console.log("一回目の呼び出し");
+      aisatu("こんにちは");
+      console.log("二回目の呼び出し");
+      aisatu("こんばんは");
+
+      //関数の定義を下に書いても、関数は実行できる
+      function dogName() {
+        console.log("私の家の犬の名前は、ポチです。");
+      }
+
+      dogName();
+      catName();
+
+      function catName() {
+        console.log("私の家のネコの名前は、タマです。");
+      }
+
+      //関数の実行
+    </script>
+  </body>
+</html>

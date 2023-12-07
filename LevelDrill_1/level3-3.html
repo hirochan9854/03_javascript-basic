@@ -55,6 +55,19 @@
       const xg = document.querySelectorAll(".xg li");
       const member = document.querySelector(".member img");
       const memberSrc = member.getAttribute("src");
+      console.log(memberSrc);
+
+      for (let i = 0; i < xg.length; i++) {
+        xg[i].addEventListener("mouseover", function () {
+          const name = xg[i].getAttribute("id");
+          member.setAttribute("src", "./images/" + name + ".webp");
+          member.setAttribute("alt", xg[i].textContent);
+        });
+        xg[i].addEventListener("mouseout", function () {
+          member.setAttribute("src", memberSrc);
+          member.setAttribute("alt", "XGロゴ");
+        });
+      }
     </script>
   </body>
 </html>

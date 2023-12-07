@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
@@ -22,6 +22,7 @@
         border: 1px solid #ccc;
         display: flex;
         max-width: 500px;
+        margin-bottom: 10px;
       }
 
       .text {
@@ -105,6 +106,43 @@
 
       //上記の配列を使って、JavaScriptで最優秀選手賞と同じhtmlを作成し、縦に並べてください。
       //for文を使って一気に作成してください。
+
+      for (let i = 0; i < name.length; i++) {
+        //要素の生成
+        const card = document.createElement("div");
+        const imgarea = document.createElement("div");
+        const img = document.createElement("img");
+        const textarea = document.createElement("div");
+        const nametext = document.createElement("h2");
+        const awardtext = document.createElement("p");
+        const teamtext = document.createElement("p");
+        const logoarea = document.createElement("img");
+
+        //要素にコンテンツを入れる
+        img.setAttribute("src", "images/" + images[i]);
+        img.setAttribute("alt", name[i]);
+
+        imgarea.setAttribute("class", "imgarea");
+        imgarea.appendChild(img);
+
+        nametext.textContent = name[i];
+        awardtext.textContent = award[i];
+        teamtext.textContent = team[i];
+        logoarea.setAttribute("src", "images/" + logo[i]);
+
+        textarea.setAttribute("class", "text");
+        textarea.appendChild(nametext);
+        textarea.appendChild(awardtext);
+        textarea.appendChild(teamtext);
+        textarea.appendChild(logoarea);
+
+        card.setAttribute("class", "card");
+        card.appendChild(imgarea);
+        card.appendChild(textarea);
+
+        const area = document.querySelector(".card");
+        area.after(card);
+      }
     </script>
   </body>
 </html>
