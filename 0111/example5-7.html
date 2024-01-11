@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>例題5-3</title>
+  </head>
+  <body>
+    <h1>名前を入力</h1>
+    <p>あなたの名前を入力してボタンを押してください。</p>
+    <input type="text" id="name" placeholder="例）山田太郎" /><br /><input
+      type="submit"
+      value="ボタンだよ"
+      id="btn"
+    />
+    <script>
+      const btn = document.querySelector("#btn");
+
+      btn.addEventListener("click", function () {
+        const input = document.querySelector("#name");
+        if (input.value === "") {
+          window.alert("名前を入力してください。");
+        } else {
+          window.alert("あなたのお名前；" + input.value);
+        }
+      });
+    </script>
+  </body>
+</html>
