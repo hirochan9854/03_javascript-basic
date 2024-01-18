@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>多次元配列</title>
+  </head>
+  <body>
+    <script>
+      const staff = [
+        ["佐藤", 41, "東京"],
+        ["鈴木", 25, "大阪"],
+        ["林", 34, "札幌"],
+      ];
+
+      for (let i = 0; i < staff.length; i++) {
+        for (let j = 0; j < staff[i].length; j++) {
+          console.log(staff[i][j]);
+        }
+      }
+    </script>
+  </body>
+</html>

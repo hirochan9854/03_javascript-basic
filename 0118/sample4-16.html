@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #000;
+      text-align: center;
+      border-collapse: collapse;
+    }
+  </style>
+  <body>
+    <h1>人気のフルーツ一覧</h1>
+    <ul></ul>
+    <script>
+      const fruits = ["りんご", "もも", "バナナ"];
+      const ul = document.querySelector("ul");
+      for (let name of fruits) {
+        const li = document.createElement("li");
+        li.innerHTML = name;
+        ul.appendChild(li);
+      }
+    </script>
+    <h1>数字を英語で表現する</h1>
+    <table class="table_nam">
+      <tr>
+        <th>数字</th>
+        <th>英語</th>
+      </tr>
+    </table>
+
+    <script>
+      const numbers = ["zero", "one", "two", "three", "four", "five"];
+
+      for (let i = 0; i < numbers.length; i++) {
+        const tr = document.createElement("tr");
+        tr.innerHTML = "<td>" + i + "</td><td>" + numbers[i] + "</td>";
+        document.querySelector("table").appendChild(tr);
+      }
+    </script>
+  </body>
+</html>

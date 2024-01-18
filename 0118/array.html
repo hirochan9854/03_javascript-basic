@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>配列の操作</title>
+  </head>
+  <body>
+    <ul>
+      <li>りんご</li>
+      <li>みかん</li>
+      <li>パインアップル</li>
+    </ul>
+    <script>
+      const animals = ["dog", "cat", "bird"];
+      animals[2] = "lion";
+      console.log(animals);
+      animals.push("tiger");
+      console.log(animals);
+
+      animals.unshift("elephant");
+      console.log(animals);
+
+      animals.pop();
+      console.log(animals);
+
+      animals.shift();
+      console.log(animals);
+
+      const fruits = document.querySelectorAll("li");
+      fruits.push("<li>いちご</li>");
+    </script>
+
+    <ul class="junishis"></ul>
+    <script>
+      const junishi = [
+        "丑",
+        "寅",
+        "卯",
+        "辰",
+        "巳",
+        "午",
+        "未",
+        "申",
+        "酉",
+        "戌",
+      ];
+      const twopieces = ["子", "亥"];
+      const junishis = document.querySelector(".junishis");
+
+      junishi.unshift(twopieces[0]);
+      junishi.push(twopieces[1]);
+
+      for (eto of junishi) {
+        const list = document.createElement("li");
+        list.innerHTML = eto;
+        junishis.appendChild(list);
+      }
+    </script>
+  </body>
+</html>
